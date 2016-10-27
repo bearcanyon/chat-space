@@ -35,6 +35,7 @@
 :groups, :name <br>
 :users_groups, [:group_id, :user_id] <br>
 
+<!-- 1対多の関係を表すもの -->
 #Association
 ## message
 - belongs_to :user
