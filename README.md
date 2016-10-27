@@ -29,8 +29,25 @@
 | user_id        |     integer | references :users |
 
 ## add_index
-:messages, :group_id
-:users, :name
-:users, :email, unique: true
-:groups, :name
-:users_groups, [:group_id, :user_id]
+:messages, :group_id <br>
+:users, :name <br>
+:users, :email, unique: true <br>
+:groups, :name <br>
+:users_groups, [:group_id, :user_id] <br>
+
+#Association
+## message
+- belongs_to :user
+- belongs_to :group
+
+## user
+- has_many :messages
+- has_many :users_groups
+
+## group
+- has_many :messages
+- has_many :users_groups
+
+## user_group
+- belongs_to :user
+- belongs_to :group
