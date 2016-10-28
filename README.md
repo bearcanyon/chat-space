@@ -6,8 +6,8 @@
 |:---------------| -----------:| -----------:|
 | body           |        text | null:false |
 | image          |      string |           |
-| group_id       |     integer | references :groups |
-| user_id        |     integer | references :users |
+| group_id       |     references | foreign_key: true |
+| user_id        |     references | foreign_key: true |
 
 <!--
 t.text :body, null: false
@@ -31,8 +31,8 @@ t.references :user, foreign_key: true
 ## users_groups <!-- 誰がどのグループに属するか -->
 | column | type | Constraint |
 |:-----------|------------:|------------:|
-| group_id       |     integer | references :groups |
-| user_id        |     integer | references :users |
+| group_id       |     references | foreign_key: true |
+| user_id        |     references | foreign_key: true |
 
 ## add_index
 :messages, :group_id <br>
