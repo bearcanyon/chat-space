@@ -36,6 +36,7 @@ t.references :user, foreign_key: true
 
 ## add_index
 :messages, :group_id <br>
+<!-- すでに貼ってあるって言われた -->
 :users, :name <br>
 :users, :email, unique: true <br>
 :groups, :name <br>
