@@ -9,6 +9,12 @@
 | group_id       |     references | foreign_key: true |
 | user_id        |     references | foreign_key: true |
 
+<!--
+t.text :body, null: false
+t.string :image
+t.references :group, foreign_key: true
+t.references :user, foreign_key: true
+ -->
 ## users
 | column | type | Constraint |
 |:-----------|------------:|------------:|
