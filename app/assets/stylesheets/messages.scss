@@ -38,20 +38,21 @@ $chat-footer-color: #ddd;
 		letter-spacing: 2px;
 		font-size: 16px;
 	}
-	.chat-user__actions {
+	&__actions {
 		float: right;
 		padding: 18px;
 	}
 }
 
-.fa {
-	display: inline-block;
-	font: normal normal normal 14px/1 FontAwesome;
-	font-size: inherit;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
+//無くても変わらないので削除します。
+// .fa {
+// 	display: inline-block;
+// 	font: normal normal normal 14px/1 FontAwesome;
+// 	font-size: inherit;
+// 	text-rendering: auto;
+// 	-webkit-font-smoothing: antialiased;
+// 	-moz-osx-font-smoothing: grayscale;
+// }
 
 .chat-groups {
 	margin: 0;
@@ -100,7 +101,7 @@ a {
 	padding-left: 40px;
 	background-color: $chat-header-color;
 	border-bottom: 1px solid #eee;
-	.chat-header__edit-btn {
+	&__edit-btn {
 		display: inline-block;
 		margin: 28px 0;
 		padding-right: 20px;
@@ -110,7 +111,7 @@ a {
 		font-size: 14px;
 		border: 2px solid;
 	}
-	.chat-header--left {
+	&--left {
 		float: left;
 	}
 	h2 {
@@ -121,15 +122,15 @@ a {
 		font-size: 20px;
 		font-weight: 400;
 	}
-	.chat-header__users {
+	&__users {
 		line-height: 20px;
 		color: #999;
 		font-size: 12px;
 	}
-	.chat-header__user {
+	&__user {
 		margin-left: 3px;
 	}
-	.chat-header--right {
+	&--right {
 		float: right;
 	}
 }
@@ -149,22 +150,22 @@ a {
 	}
 	.chat-message {
 		margin-bottom: 40px;
-		.chat-message__header {
+		&__header {
 			line-height: 20px;
 		}
-		.chat-message__name {
+		&__name {
 			float: left;
 			margin-bottom: 10px;
 			font-weight: 600;
 			font-size: 16px;
 		}
-		.chat-message__time {
+		&__time {
 			float: left;
 			margin-left: 10px;
 			color: #aaa;
 			font-size: 12px;
 		}
-		.chat-message__body {
+		&__body {
 			font-size: 14px;
 		}
 	}
