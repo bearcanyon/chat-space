@@ -1,7 +1,3 @@
-
-//%はhtmlタグに直接変換
-//=はruby
-//'
 .layout-notification
   .chat
     .chat-side
@@ -35,58 +31,3 @@
             %p.chat-message__body テスト
       %div.chat-footer
         %form.new_message
-
-
-
-
-
-    / .layout-notification
-    /   .chat
-    /     .chat-side
-    /       .chat-user.clearfix
-    /         %h5 NaokiKumagai
-    /         .chat-user__actions
-    /           %a.chat-user__action{:href => "/chat_groups/new"}
-    /             %i.fa.fa-pencil-square-o
-    /           %a.chat-user__action{:href => "/users/edit"}
-    /             %i.fa.fa-cog
-    /       %ul.chat-groups
-    /         %li.chat-group
-    /           %a.chat-group__link{:href => "/chat_groups/1652/messages"}
-    /             %p.chat-group__name テスト
-    /             %p.chat-group__message
-    /               fasdf
-    /     .chat-main
-    /       .chat-header.clearfix
-    /         .chat-header--left
-    /           %h2 テスト
-    /           %p.chat-header__users
-    /             Members:
-    /             %span.chat-header__user NaokiKumagai
-    /             %span.chat-header__user 山田太郎
-    /             %span.chat-header__user 鈴木次郎
-    /         .chat-header--right
-    /           %a.chat-header__edit-btn{:href => "/chat_groups/1652/edit"} Edit
-    /       .chat-body
-    /         %ul.chat-messages
-    /           %li.chat-message
-    /             .chat-message__header.clearfix
-    /               %p.chat-message__name
-    /                 NaokiKumagai
-    /               %p.chat-message__time
-    /                 2016/11/05 01:07:15
-    /             %p.chat-message__body
-    /               fasdf
-    /       .chat-footer
-    /         %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/chat_groups/1652/messages", :enctype => "multipart/form-data", :method => "post"}
-    /           %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-    /           %input{:name => "authenticity_token", :type => "hidden", :value => "Tkp+xpQg6oz1j0c9vn4NUwKzc81IbDXFQ5+ZAhLbRzwwGCcVquu3qENgdylhVU/dlffLsbkoMCmjS6RC3OuiSw=="}/
-    /           .chat-footer__body
-    /             %textarea#message_body{:name => "message[body]", :placeholder => "type a message", :row => "1"}
-    /             %label.chat-footer__file
-    /               %input#message_image{:name => "message[image]", :type => "file"}/
-    /               %i.fa.fa-image
-    /           %input{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
-    / = form_for @message, remote: true do |f|
-    /       = f.text_field :text, class: "hat-form-area__form form", id: "js-message-form"
-    /       = f.submit "SEND", class: "chat-form-area__submit btn", id: "js-message-submit"
