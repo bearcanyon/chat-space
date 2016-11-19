@@ -1,0 +1,33 @@
+.layout-notification
+  .chat
+    .chat-side
+      .chat-user
+        %h5 NaokiKumagai
+        .chat-user__actions
+          %a.chat-user__action
+            %i.fa.fa-pencil-square-o
+          %a.chat-user__action
+            %i.fa.fa-cog
+      .chat-groups
+        %li.chat-group
+          %a.chat-group__link
+            %p.chat-group__name 名前
+            %p.chat-group__message メッセージ
+    .chat-main
+      %div.chat-header
+        %div.chat-header--left
+          %h2 テスト
+          %p.chat-header__users
+            Members:
+            %span.chat-header__user NaokiKumagai
+        %div.chat-header--right
+          %a.chat-header__edit-btn Edit
+      %div.chat-body
+        %ul.chat-messages
+          %li.chat-message
+            .chat-message__header.clearfix
+              %p.chat-message__name NaokiKumagai
+              %p.chat-message__time 2016/11/05
+            %p.chat-message__body テスト
+      %div.chat-footer
+        %form.new_message
