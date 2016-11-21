@@ -1,3 +1,6 @@
+$submit-button-color: #fff;
+$submit-button-backgroundcolor: #38aef0;
+
 .account-page {
   &__inner {
     width: 980px;
@@ -61,8 +64,7 @@
         font-size: 11px;
       }
     }
-
-    .field-input {
+    &-input {
       input {
         width: 100%;
         padding: 10px;
@@ -85,12 +87,12 @@
   input[type='submit'] {
     float: left;
     margin-top: 20px;
-    color: #fff;
-    background-color: #38aef0;
+    color: $submit-button-color;
+    background-color: $submit-button-backgroundcolor;
   }
 
   .field-label {
-    &_with_errors {
+    .field_with_errors {
       display: inline-block;
       color: #d65f4c;
       font-weight: 400;

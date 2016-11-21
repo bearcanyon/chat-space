@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   	messages_path
   end
   def after_sign_out_path_for(resource)
-  	messages_path
+  	edit_user_registration_path
   end
 end
 # サインインした後に飛ばすデバイスが用意したaftersignin
