@@ -41,18 +41,13 @@ $chat-footer-color: #ddd;
 	&__actions {
 		float: right;
 		padding: 18px;
+		i {
+			color: #fff;
+			width: 20px;
+			height: 20px;
+		}
 	}
 }
-
-//無くても変わらないので削除します。
-// .fa {
-// 	display: inline-block;
-// 	font: normal normal normal 14px/1 FontAwesome;
-// 	font-size: inherit;
-// 	text-rendering: auto;
-// 	-webkit-font-smoothing: antialiased;
-// 	-moz-osx-font-smoothing: grayscale;
-// }
 
 .chat-groups {
 	margin: 0;
