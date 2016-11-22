@@ -1,3 +1,4 @@
+@import "clearfix";
 $submit-button-color: #fff;
 $submit-button-backgroundcolor: #38aef0;
 
@@ -14,14 +15,10 @@ $submit-button-backgroundcolor: #38aef0;
       float: left;
       width: 50%;
     }
-    &:after {
-      clear: both;
-      content: "";
-      display: block;
-    }
+    @include clearfix();
   }
 
-  .account-page__header {
+  &__header {
     h2 {
       margin-bottom: 10px;
       letter-spacing: 3px;
