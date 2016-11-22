@@ -1,8 +1,5 @@
 @import "./base";
-$chat-user-color: #253141;
-$chat-side-color: #2f3e51;
-$chat-header-color: #fff;
-$chat-footer-color: #ddd;
+@import "color";
 
 .clearfix:after {
 	content: '';
