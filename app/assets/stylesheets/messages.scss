@@ -1,9 +1,3 @@
-@import "./base";
-$chat-user-color: #253141;
-$chat-side-color: #2f3e51;
-$chat-header-color: #fff;
-$chat-footer-color: #ddd;
-
 .clearfix:after {
 	content: '';
 	display: block;
@@ -42,17 +36,12 @@ $chat-footer-color: #ddd;
 		float: right;
 		padding: 18px;
 	}
+	i {
+			color: #fff;
+			width: 20px;
+			height: 20px;
+	}
 }
-
-//無くても変わらないので削除します。
-// .fa {
-// 	display: inline-block;
-// 	font: normal normal normal 14px/1 FontAwesome;
-// 	font-size: inherit;
-// 	text-rendering: auto;
-// 	-webkit-font-smoothing: antialiased;
-// 	-moz-osx-font-smoothing: grayscale;
-// }
 
 .chat-groups {
 	margin: 0;
