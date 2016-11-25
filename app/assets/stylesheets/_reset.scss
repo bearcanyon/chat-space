@@ -12,12 +12,21 @@
         color:#000;
         background:#FFF;
     }
+    //ここでcssを指定しよう！
+    // .notice .alert {
+    //     height: 30px;
+    //     line-height: 30px;
+    //     letter-spacing: 1px;
+    //     color: #fff;
+    //     font-weight: 200;
+    //     text-align: center;
+    // }
     /*
         TODO remove settings on BODY since we can't namespace it.
     */
     /*
         TODO test putting a class on HEAD.
-            - Fails on FF. 
+            - Fails on FF.
     */
     body,
     div,
