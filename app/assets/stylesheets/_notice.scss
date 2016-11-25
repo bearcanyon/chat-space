@@ -1,0 +1,16 @@
+.notice {
+	height: 30px;
+	line-height: 30px;
+	letter-spacing: 1px;
+	color: $chat-header-color;
+	text-align: center;
+	background-color: #38aef0;
+}
+.alert {
+	height: 30px;
+	line-height: 30px;
+	letter-spacing: 1px;
+	color: $chat-header-color;
+	text-align: center;
+	background-color: #d65f4c;
+}
