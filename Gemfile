@@ -7,6 +7,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
+gem 'pry-rails'
+
 
 # view
 gem 'sass-rails', '~> 5.0'
@@ -18,11 +20,14 @@ gem 'erb2haml'
 gem "font-awesome-rails"
 
 group :development, :test do
-  gem 'byebug'
+	gem 'byebug'
+	gem 'rspec-rails'
+	gem 'factory_girl_rails'
+	gem 'faker'
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
+	gem 'web-console', '~> 2.0'
+	gem 'spring'
 end
 
