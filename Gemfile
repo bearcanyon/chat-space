@@ -9,6 +9,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'rspec-rails'
 gem 'factory_girl_rails'
+gem 'pry-rails'
+
 
 # view
 gem 'sass-rails', '~> 5.0'
