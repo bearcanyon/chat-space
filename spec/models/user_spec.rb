@@ -28,7 +28,6 @@ describe User do
 		it "is invalid without a password_confirmation" do
 			user = build(:user, password_confirmation: "")
 			user.valid?
-			# binding.pry
 			expect(user.errors[:password_confirmation]).to include("とパスワードの入力が一致しません。")
 		end
 
@@ -36,7 +35,6 @@ describe User do
 			user = create(:user)
 			anothor_user = build(:user)
 			anothor_user.valid?
-			binding.pry
 			expect(anothor_user.errors[:email]).to include("はすでに存在します。")
 		end
 	end
