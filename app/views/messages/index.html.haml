@@ -22,7 +22,8 @@
             Members:
             %span.chat-header__user NaokiKumagai
         %div.chat-header--right
-          %a.chat-header__edit-btn{ href: 'groups/1/edit'} Edit
+          / =link_to edit_group_path do
+          .chat-header__edit-btn Edit
       %div.chat-body
         %ul.chat-messages
           %li.chat-message
