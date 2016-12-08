@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
-	def index
+	before_action :find_group, only: [:edit, :update]
 
+	def index
 		@groups = Group.all
 	end
 	def new
@@ -16,11 +17,9 @@ class GroupsController < ApplicationController
 	end
 
 	def edit
-		find_group
 	end
 
 	def update
-		find_group
 		@group.update(create_params)
 		redirect_to :root
 	end
