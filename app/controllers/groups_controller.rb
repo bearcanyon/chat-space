@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
 	def index
+
 		@groups = Group.all
 	end
 	def new
@@ -15,16 +16,19 @@ class GroupsController < ApplicationController
 	end
 
 	def edit
-		@group = Group.find(params[:id])
+		find_group
 	end
 
 	def update
-		group = Group.find(params[:id])
-		group.update(create_params)
+		find_group
+		@group.update(create_params)
 		redirect_to :root
 	end
 
 	def create_params
 		params.require(:group).permit(:name, user_ids: [])
+	end
+	def find_group
+		@group = Group.find(params[:id])
 	end
 end
