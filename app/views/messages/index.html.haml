@@ -1,19 +1,6 @@
 .layout-notification
   .chat
-    .chat-side
-      .chat-user
-        %h5 NaokiKumagai
-        .chat-user__actions
-          %a.chat-user__action
-          =link_to new_group_path, class: "chat-user__action" do
-            %i.fa.fa-pencil-square-o
-          =link_to edit_user_registration_path, class: "chat-user__action" do
-            %i.fa.fa-cog
-      .chat-groups
-        %li.chat-group
-          %a.chat-group__link
-            %p.chat-group__name 名前
-            %p.chat-group__message メッセージ
+    = render partial: "./commons/chat-side", locals: {groups: @groups}
     .chat-main
       %div.chat-header
         %div.chat-header--left
@@ -22,8 +9,7 @@
             Members:
             %span.chat-header__user NaokiKumagai
         %div.chat-header--right
-          / =link_to edit_group_path do
-          .chat-header__edit-btn Edit
+          =link_to "Edit", edit_group_path(@group), class: "chat-header__edit-btn"
       %div.chat-body
         %ul.chat-messages
           %li.chat-message
