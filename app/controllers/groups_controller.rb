@@ -19,6 +19,9 @@ class GroupsController < ApplicationController
 	end
 
 	def update
+		group = Group.find(params[:id])
+		group.update(create_params)
+		redirect_to :root
 	end
 
 	def create_params
