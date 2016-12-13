@@ -4,7 +4,7 @@
     .chat-main
       %div.chat-header
         %div.chat-header--left
-          %h2 テスト
+          %h2= @group.name
           %p.chat-header__users
             Members:
             %span.chat-header__user NaokiKumagai
@@ -18,4 +18,9 @@
               %p.chat-message__time 2016/11/05
             %p.chat-message__body テスト
       %div.chat-footer
-        %form.new_message
+        =form_for [@group, @message] do |f|
+          .chat-footer__body
+            =f.text_area :body, placeholder: 'メッセージを入力してください'
+            =f.label :image, class: 'chat-footer__file' do
+              %i.fa.fa-image
+          =f.submit 'Send'
