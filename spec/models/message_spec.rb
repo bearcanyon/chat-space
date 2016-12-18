@@ -1,6 +1,5 @@
 require 'rails_helper'
 RSpec.describe Message, :type => :model do
-  describe Message do
     describe '#create' do
 
       it "バリデーションに引っかかり保存できない場合" do
@@ -15,6 +14,5 @@ RSpec.describe Message, :type => :model do
         expect(message).to be_valid
       end
     end
-  end
 end
 #
