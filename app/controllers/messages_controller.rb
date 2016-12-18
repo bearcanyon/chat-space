@@ -1,5 +1,7 @@
 class MessagesController < ApplicationController
 
+  before_action :authenticate_user!#ログインしていないときログインページに飛ばす
+
 	def index
 		@groups = Group.all
 		@group = Group.find(params[:group_id])
