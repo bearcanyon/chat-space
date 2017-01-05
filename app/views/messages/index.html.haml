@@ -12,11 +12,7 @@
           =link_to "Edit", edit_group_path(@group), class: "chat-header__edit-btn"
       %div.chat-body
         %ul.chat-messages
-          %li.chat-message
-            .chat-message__header.clearfix
-              %p.chat-message__name NaokiKumagai
-              %p.chat-message__time 2016/11/05
-            %p.chat-message__body テスト
+          = render partial: "./commons/message", :collection => @messages, :as => "message"
       %div.chat-footer
         =form_for [@group, @message] do |f|
           .chat-footer__body

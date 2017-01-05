@@ -5,12 +5,16 @@ class MessagesController < ApplicationController
 	def index
 		@groups = Group.all
 		@group = Group.find(params[:group_id])
-    @messages = @group.messages
+    @messages = @group.messages.order("created_at ASC")
     @message = Message.new
+    respond_to do |format|
+      format.html
+      format.json
+    end
 	end
 
 	def create
-    @message = Message.new(message_params)
+    @message = current_user.messages.new(message_params)
     if @message.save
       flash[:notice] = "メッセージ送信完了"
     else
@@ -24,3 +28,5 @@ class MessagesController < ApplicationController
     params.require(:message).permit(:body).merge(group_id: params[:group_id])
   end
 end
+
+
