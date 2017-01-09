@@ -15,8 +15,9 @@
           = render partial: "./commons/message", :collection => @messages, :as => "message"
       %div.chat-footer
         =form_for [@group, @message] do |f|
-          .chat-footer__body
-            =f.text_area :body, placeholder: 'メッセージを入力してください'
-            =f.label :image, class: 'chat-footer__file' do
-              %i.fa.fa-image
-          =f.submit 'Send'
+          .new_message
+            .chat-footer__body
+              =f.text_area :body, placeholder: 'メッセージを入力してください'
+              =f.label :image, class: 'chat-footer__file' do
+                %i.fa.fa-image
+            =f.submit 'Send'
